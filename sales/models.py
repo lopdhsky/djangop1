@@ -14,6 +14,9 @@ class Sale(models.Model):
     age = models.IntegerField(default=0)
     person = models.ForeignKey("Person", on_delete=models.CASCADE) # 데이터 테이블 사이의 관계를 정리함
 
+    def __str__(self):
+        return f'{self.last_name} {self.first_name}'
+
 class Person(models.Model):
     회원 = models.OneToOneField(아이디, on_delete=models.CASCADE)
 

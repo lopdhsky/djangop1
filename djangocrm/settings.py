@@ -55,7 +55,7 @@ ROOT_URLCONF = 'djangocrm.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'], # 아무것도 없는 기본값일떄는 기본templates폴더에서 동작
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
